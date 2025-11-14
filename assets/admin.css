@@ -1,0 +1,90 @@
+/* Eisenhower Matrix - Admin Styles */
+
+/* Meta-Box Styling */
+#em_task_details .inside {
+    padding: 12px;
+}
+
+#em_task_details label {
+    font-weight: 600;
+    color: #1d2327;
+}
+
+#em_task_details input[type="date"],
+#em_task_details select {
+    margin-top: 5px;
+    padding: 6px 8px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#em_task_details input[type="date"]:focus,
+#em_task_details select:focus {
+    border-color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+    outline: none;
+}
+
+/* Post Type Icon Styling */
+#adminmenu .menu-icon-em_task img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.6;
+}
+
+#adminmenu .menu-icon-em_task:hover img,
+#adminmenu .menu-icon-em_task.current img {
+    opacity: 1;
+}
+
+/* Taxonomie-Checkboxen im Admin */
+.taxonomy-em_importance .categorychecklist,
+.taxonomy-em_urgency .categorychecklist {
+    margin-top: 10px;
+}
+
+.taxonomy-em_importance .categorychecklist label,
+.taxonomy-em_urgency .categorychecklist label {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+/* Status-Anzeige in der Post-Liste */
+.column-em_status {
+    width: 100px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-badge.offen {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.status-badge.in_arbeit {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+.status-badge.erledigt {
+    background: #e8f5e9;
+    color: #388e3c;
+}
+
+/* Hilfetext-Styling */
+.em-help-text {
+    display: block;
+    margin-top: 5px;
+    font-size: 13px;
+    color: #646970;
+    font-style: italic;
+}

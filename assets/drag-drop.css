@@ -1,0 +1,293 @@
+/* Drag & Drop Styles für Eisenhower Matrix */
+
+/* Aufgabe während des Draggings */
+.task-item {
+    cursor: move;
+    cursor: grab;
+    transition: all 0.3s ease;
+}
+
+.task-item:active {
+    cursor: grabbing;
+}
+
+.task-item.dragging {
+    opacity: 0.5;
+    transform: scale(0.95);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Quadrant während Drag-Over */
+.quadrant.drag-over {
+    background: rgba(52, 152, 219, 0.1);
+    border-color: #3498db;
+    border-width: 3px;
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.3);
+}
+
+/* Spezifische Quadranten-Highlights */
+.quadrant.q1.drag-over {
+    background: rgba(231, 76, 60, 0.1);
+    border-color: #e74c3c;
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.3);
+}
+
+.quadrant.q2.drag-over {
+    background: rgba(39, 174, 96, 0.1);
+    border-color: #27ae60;
+    box-shadow: 0 0 20px rgba(39, 174, 96, 0.3);
+}
+
+.quadrant.q3.drag-over {
+    background: rgba(243, 156, 18, 0.1);
+    border-color: #f39c12;
+    box-shadow: 0 0 20px rgba(243, 156, 18, 0.3);
+}
+
+.quadrant.q4.drag-over {
+    background: rgba(149, 165, 166, 0.1);
+    border-color: #95a5a6;
+    box-shadow: 0 0 20px rgba(149, 165, 166, 0.3);
+}
+
+/* Benachrichtigungen */
+.em-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 10000;
+    opacity: 0;
+    transform: translateX(400px);
+    transition: all 0.3s ease;
+}
+
+.em-notification.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.em-notification-success {
+    background: #27ae60;
+}
+
+.em-notification-error {
+    background: #e74c3c;
+}
+
+/* Ladeanzeige */
+.em-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.em-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255,255,255,0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Visueller Hinweis dass Items draggbar sind */
+.task-item::before {
+    content: "⋮⋮";
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #bdc3c7;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.task-item {
+    position: relative;
+    padding-left: 35px;
+}
+
+.task-item:hover::before {
+    opacity: 1;
+}
+
+/* ============================================
+   RESPONSIVE ANPASSUNGEN - TABLET
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .em-notification {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+    
+    .task-item::before {
+        font-size: 14px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE ANPASSUNGEN - MOBILE
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Benachrichtigungen über volle Breite */
+    .em-notification {
+        right: 10px;
+        left: 10px;
+        top: 10px;
+        text-align: center;
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+    
+    /* Kompakterer Drag-Indikator */
+    .task-item {
+        padding-left: 30px;
+    }
+    
+    .task-item::before {
+        left: 6px;
+        font-size: 12px;
+    }
+    
+    /* Immer sichtbar auf Touch-Geräten */
+    .task-item::before {
+        opacity: 0.6;
+    }
+    
+    /* Größere Touch-Targets */
+    .task-item {
+        min-height: 44px; /* Apple HIG Empfehlung */
+        margin-bottom: 0.6rem;
+    }
+    
+    /* Reduzierte Transformationen auf Mobile */
+    .task-item.dragging {
+        transform: scale(0.98);
+    }
+    
+    .quadrant.drag-over {
+        transform: scale(1.01);
+    }
+    
+    /* Spinner etwas kleiner */
+    .em-spinner {
+        width: 40px;
+        height: 40px;
+        border-width: 4px;
+    }
+}
+
+/* ============================================
+   TOUCH-OPTIMIERUNGEN
+   ============================================ */
+
+@media (hover: none) and (pointer: coarse) {
+    /* Keine Hover-Effekte auf reinen Touch-Geräten */
+    .task-item:hover::before {
+        opacity: 0.6;
+    }
+    
+    /* Touch-Feedback */
+    .task-item:active {
+        background: rgba(52, 152, 219, 0.1);
+    }
+    
+    .quadrant:active {
+        background: rgba(52, 152, 219, 0.05);
+    }
+}
+
+/* ============================================
+   KLEINE SMARTPHONES
+   ============================================ */
+
+@media (max-width: 480px) {
+    .em-notification {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+        border-radius: 6px;
+    }
+    
+    .task-item {
+        padding-left: 25px;
+    }
+    
+    .task-item::before {
+        left: 5px;
+        font-size: 11px;
+    }
+    
+    /* Kleinerer Spinner */
+    .em-spinner {
+        width: 35px;
+        height: 35px;
+        border-width: 3px;
+    }
+}
+
+/* ============================================
+   LANDSCAPE MODUS auf MOBILE
+   ============================================ */
+
+@media (max-width: 900px) and (orientation: landscape) {
+    .em-notification {
+        top: 5px;
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+    
+    .em-loading {
+        background: rgba(0,0,0,0.6);
+    }
+    
+    .em-spinner {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY - PREFERS REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    .task-item,
+    .quadrant,
+    .em-notification {
+        transition: none;
+    }
+    
+    .task-item.dragging {
+        transform: none;
+    }
+    
+    .quadrant.drag-over {
+        transform: none;
+    }
+    
+    .em-spinner {
+        animation: none;
+        border: 5px solid rgba(255,255,255,0.3);
+        border-top-color: transparent;
+    }
+}

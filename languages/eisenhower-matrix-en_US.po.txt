@@ -1,0 +1,163 @@
+# English translation for Eisenhower Matrix
+# Copyright (C) 2025 Eisenhower Matrix
+msgid ""
+msgstr ""
+"Project-Id-Version: Eisenhower Matrix 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/eisenhower-matrix\n"
+"POT-Creation-Date: 2025-01-01 12:00+0000\n"
+"PO-Revision-Date: 2025-01-01 12:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: English\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: includes/class-post-type.php
+msgid "Aufgaben"
+msgstr "Tasks"
+
+#: includes/class-post-type.php
+msgid "Aufgabe"
+msgstr "Task"
+
+#: includes/class-post-type.php
+msgid "Neue Aufgabe"
+msgstr "New Task"
+
+#: includes/class-post-type.php
+msgid "Neue Aufgabe hinzufügen"
+msgstr "Add New Task"
+
+#: includes/class-post-type.php
+msgid "Aufgabe bearbeiten"
+msgstr "Edit Task"
+
+#: includes/class-post-type.php
+msgid "Aufgabe ansehen"
+msgstr "View Task"
+
+#: includes/class-post-type.php
+msgid "Aufgaben suchen"
+msgstr "Search Tasks"
+
+#: includes/class-post-type.php
+msgid "Keine Aufgaben gefunden"
+msgstr "No Tasks Found"
+
+#: includes/class-post-type.php
+msgid "Keine Aufgaben im Papierkorb"
+msgstr "No Tasks Found in Trash"
+
+#: includes/class-taxonomies.php
+msgid "Wichtigkeit"
+msgstr "Importance"
+
+#: includes/class-taxonomies.php
+msgid "Dringlichkeit"
+msgstr "Urgency"
+
+#: includes/class-taxonomies.php
+msgid "Wichtig"
+msgstr "Important"
+
+#: includes/class-taxonomies.php
+msgid "Nicht wichtig"
+msgstr "Not Important"
+
+#: includes/class-taxonomies.php
+msgid "Dringend"
+msgstr "Urgent"
+
+#: includes/class-taxonomies.php
+msgid "Nicht dringend"
+msgstr "Not Urgent"
+
+#: includes/class-meta-boxes.php
+msgid "Aufgaben-Details"
+msgstr "Task Details"
+
+#: includes/class-meta-boxes.php
+msgid "Deadline:"
+msgstr "Deadline:"
+
+#: includes/class-meta-boxes.php
+msgid "Status:"
+msgstr "Status:"
+
+#: includes/class-meta-boxes.php
+msgid "Offen"
+msgstr "Open"
+
+#: includes/class-meta-boxes.php
+msgid "In Arbeit"
+msgstr "In Progress"
+
+#: includes/class-meta-boxes.php
+msgid "Erledigt"
+msgstr "Completed"
+
+#: includes/class-shortcode.php
+msgid "Sofort erledigen"
+msgstr "Do First"
+
+#: includes/class-shortcode.php
+msgid "Wichtig & Dringend"
+msgstr "Important & Urgent"
+
+#: includes/class-shortcode.php
+msgid "Planen"
+msgstr "Schedule"
+
+#: includes/class-shortcode.php
+msgid "Wichtig & Nicht dringend"
+msgstr "Important & Not Urgent"
+
+#: includes/class-shortcode.php
+msgid "Delegieren"
+msgstr "Delegate"
+
+#: includes/class-shortcode.php
+msgid "Nicht wichtig & Dringend"
+msgstr "Not Important & Urgent"
+
+#: includes/class-shortcode.php
+msgid "Eliminieren"
+msgstr "Eliminate"
+
+#: includes/class-shortcode.php
+msgid "Nicht wichtig & Nicht dringend"
+msgstr "Not Important & Not Urgent"
+
+#: includes/class-shortcode.php
+msgid "Keine Aufgaben"
+msgstr "No Tasks"
+
+#: includes/class-drag-drop.php
+msgid "Aufgabe erfolgreich verschoben!"
+msgstr "Task moved successfully!"
+
+#: includes/class-drag-drop.php
+msgid "Fehler beim Verschieben der Aufgabe."
+msgstr "Error moving task."
+
+#: includes/class-drag-drop.php
+msgid "Verbindungsfehler. Bitte versuche es erneut."
+msgstr "Connection error. Please try again."
+
+#: includes/class-drag-drop.php
+msgid "Ungültige Parameter"
+msgstr "Invalid parameters"
+
+#: includes/class-drag-drop.php
+msgid "Keine Berechtigung"
+msgstr "No permission"
+
+#: includes/class-drag-drop.php
+msgid "Aufgabe erfolgreich aktualisiert"
+msgstr "Task updated successfully"
+
+#: includes/class-drag-drop.php
+msgid "Fehler beim Aktualisieren"
+msgstr "Error updating"
